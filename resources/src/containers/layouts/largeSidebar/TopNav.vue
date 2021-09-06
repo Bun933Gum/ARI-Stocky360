@@ -15,7 +15,7 @@
     <div style="margin: auto"></div>
 
     <div class="header-part-right">
-      <router-link 
+      <router-link
         v-if="currentUserPermissions && currentUserPermissions.includes('Pos_view')"
         class="btn btn-outline-primary tn-sm btn-rounded"
         to="/app/pos"
@@ -54,7 +54,11 @@
               <a @click="SetLocal('en')">
                 <i title="en" class="flag-icon flag-icon-squared flag-icon-gb"></i> English
               </a>
-              <a @click="SetLocal('fr')">
+              <a @click="SetLocal('Ind')">
+                <i title="sa" class="flag-icon flag-icon-squared flag-icon-id"></i>
+                <span class="title-lang">Indonesian</span>
+              </a>
+              <!-- <a @click="SetLocal('fr')">
                 <i title="fr" class="flag-icon flag-icon-squared flag-icon-fr"></i>
                 <span class="title-lang">French</span>
               </a>
@@ -94,16 +98,10 @@
                 <i title="it" class="flag-icon flag-icon-squared flag-icon-it"></i>
                 <span class="title-lang">Italien</span>
               </a>
-              <a @click="SetLocal('Ind')">
-                <i title="sa" class="flag-icon flag-icon-squared flag-icon-id"></i>
-                <span class="title-lang">Indonesian</span>
-              </a>
-
               <a @click="SetLocal('tr_ch')">
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-cn"></i>
                 <span class="title-lang">Traditional Chinese</span>
               </a>
-
               <a @click="SetLocal('ru')">
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-ru"></i>
                 <span class="title-lang">Russian</span>
@@ -112,7 +110,7 @@
               <a @click="SetLocal('vn')">
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-vn"></i>
                 <span class="title-lang">Vietnamese</span>
-              </a>
+              </a> -->
             </div>
           </vue-perfect-scrollbar>
         </b-dropdown>
@@ -120,7 +118,7 @@
       <!-- Notificaiton -->
       <div class="dropdown">
         <b-dropdown
-          id="dropdown-1" 
+          id="dropdown-1"
           text="Dropdown Button"
           class="m-md-2 badge-top-container d-none  d-sm-inline-block"
           toggle-class="text-decoration-none"
@@ -151,7 +149,7 @@
                </router-link>
               </div>
             </div>
-           
+
           </vue-perfect-scrollbar>
         </b-dropdown>
       </div>
@@ -213,7 +211,7 @@ export default {
   },
 
   data() {
-  
+
     return {
       langs: [
         "en",
@@ -231,7 +229,7 @@ export default {
         "hn",
         "vn"
       ],
-      
+
       isDisplay: true,
       isStyle: true,
       isSearchOpen: false,
@@ -239,10 +237,10 @@ export default {
       isMegaMenuOpen: false,
       is_Load:false,
       // alerts:0,
-     
+
     };
   },
- 
+
    computed: {
      ...mapGetters([
        "currentUser",
@@ -255,7 +253,7 @@ export default {
   },
 
   methods: {
-    
+
     ...mapActions([
       "changeSecondarySidebarProperties",
       "changeSidebarProperties",

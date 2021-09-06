@@ -49,7 +49,11 @@
               <a @click="SetLocal('en')">
                 <i title="en" class="flag-icon flag-icon-squared flag-icon-gb"></i> English
               </a>
-              <a @click="SetLocal('fr')">
+              <a @click="SetLocal('Ind')">
+                <i title="sa" class="flag-icon flag-icon-squared flag-icon-id"></i>
+                <span class="title-lang">Indonesian</span>
+              </a>
+              <!-- <a @click="SetLocal('fr')">
                 <i title="fr" class="flag-icon flag-icon-squared flag-icon-fr"></i>
                 <span class="title-lang">French</span>
               </a>
@@ -89,11 +93,6 @@
                 <i title="it" class="flag-icon flag-icon-squared flag-icon-it"></i>
                 <span class="title-lang">Italien</span>
               </a>
-              <a @click="SetLocal('Ind')">
-                <i title="sa" class="flag-icon flag-icon-squared flag-icon-id"></i>
-                <span class="title-lang">Indonesian</span>
-              </a>
-
               <a @click="SetLocal('tr_ch')">
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-cn"></i>
                 <span class="title-lang">Traditional Chinese</span>
@@ -103,10 +102,9 @@
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-ru"></i>
                 <span class="title-lang">Russian</span>
               </a>
-
               <a @click="SetLocal('vn')">
                 <i title="sa" class="flag-icon flag-icon-squared flag-icon-vn"></i>
-                <span class="title-lang">Vietnamese</span>
+                <span class="title-lang">Vietnamese</span> -->
               </a>
             </div>
           </div>
@@ -139,7 +137,7 @@ export default {
         "hn",
         "vn"
       ],
-      
+
     };
   },
 
@@ -160,7 +158,7 @@ export default {
       this.$store.dispatch("language/setLanguage", locale);
       Fire.$emit("ChangeLanguage");
     },
-   
+
   },
 };
 </script>
