@@ -51,7 +51,11 @@
                         <a @click="SetLocal('en')">
                           <i title="en" class="flag-icon flag-icon-squared flag-icon-gb"></i> English
                         </a>
-                        <a @click="SetLocal('fr')">
+                        <a @click="SetLocal('Ind')">
+                          <i title="sa" class="flag-icon flag-icon-squared flag-icon-id"></i>
+                          <span class="title-lang">Indonesian</span>
+                        </a>
+                        <!-- <a @click="SetLocal('fr')">
                           <i title="fr" class="flag-icon flag-icon-squared flag-icon-fr"></i>
                           <span class="title-lang">French</span>
                         </a>
@@ -63,22 +67,18 @@
                           <i title="sa" class="flag-icon flag-icon-squared flag-icon-tr"></i>
                           <span class="title-lang">Turkish</span>
                         </a>
-
                         <a @click="SetLocal('sm_ch')">
                           <i title="sa" class="flag-icon flag-icon-squared flag-icon-cn"></i>
                           <span class="title-lang">Simplified Chinese</span>
                         </a>
-
                         <a @click="SetLocal('thai')">
                           <i title="sa" class="flag-icon flag-icon-squared flag-icon-tw"></i>
                           <span class="title-lang">Thaï</span>
                         </a>
-
                         <a @click="SetLocal('hn')">
                           <i title="sa" class="flag-icon flag-icon-squared flag-icon-in"></i>
                           <span class="title-lang">Hindi</span>
                         </a>
-
                         <a @click="SetLocal('de')">
                           <i title="de" class="flag-icon flag-icon-squared flag-icon-de"></i>
                           <span class="title-lang">German</span>
@@ -91,16 +91,10 @@
                           <i title="it" class="flag-icon flag-icon-squared flag-icon-it"></i>
                           <span class="title-lang">Italien</span>
                         </a>
-                        <a @click="SetLocal('Ind')">
-                          <i title="sa" class="flag-icon flag-icon-squared flag-icon-id"></i>
-                          <span class="title-lang">Indonesian</span>
-                        </a>
-
                         <a @click="SetLocal('tr_ch')">
                           <i title="sa" class="flag-icon flag-icon-squared flag-icon-cn"></i>
                           <span class="title-lang">Traditional Chinese</span>
                         </a>
-
                         <a @click="SetLocal('ru')">
                           <i title="sa" class="flag-icon flag-icon-squared flag-icon-ru"></i>
                           <span class="title-lang">Russian</span>
@@ -109,7 +103,7 @@
                         <a @click="SetLocal('vn')">
                           <i title="sa" class="flag-icon flag-icon-squared flag-icon-vn"></i>
                           <span class="title-lang">Vietnamese</span>
-                        </a>
+                        </a> -->
                       </div>
                     </vue-perfect-scrollbar>
                   </b-dropdown>
@@ -1235,7 +1229,7 @@ export default {
           GrandTotal: "",
           paid_amount: ""
         },
-        
+
         details: [],
         setting: {
           logo: "",
@@ -1495,7 +1489,7 @@ export default {
             }else{
               this.CreatePOS();
             }
-       
+
         }
       });
     },
@@ -2066,7 +2060,7 @@ export default {
             this.$t("Warning")
           );
           this.payment.amount = 0;
-        } 
+        }
         else if (this.payment.amount > this.GrandTotal) {
           this.makeToast(
             "warning",
@@ -2083,7 +2077,7 @@ export default {
     Verified_Received_Amount() {
       if (isNaN(this.payment.received_amount)) {
         this.payment.received_amount = 0;
-      } 
+      }
     },
 
     //-----------------------------------Delete Detail Product ------------------------------\\
